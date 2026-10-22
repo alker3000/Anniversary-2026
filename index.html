@@ -19,15 +19,15 @@
       --rose-gold-light: #f3d1d9;
       --rose-gold: #d48b9c;
       --rose-gold-deep: #b56576;
-      --rose-crimson: #9e3d56;
-      --text-dark: #4a2531;
-      --text-body: #5e3442;
-      --text-muted: #8c5c6b;
-      --card-glass: rgba(255, 251, 252, 0.74);
-      --card-border: rgba(255, 255, 255, 0.88);
-      --shadow-soft: 0 24px 60px -12px rgba(168, 85, 108, 0.22),
-                     0 8px 24px -6px rgba(168, 85, 108, 0.12),
-                     inset 0 1px 1px rgba(255, 255, 255, 0.95);
+      --rose-crimson: #94324b;
+      --text-dark: #361520;
+      --text-body: #421b28;
+      --text-muted: #754352;
+      --card-glass: rgba(255, 251, 252, 0.46);
+      --card-border: rgba(255, 255, 255, 0.82);
+      --shadow-soft: 0 24px 60px -12px rgba(168, 85, 108, 0.2),
+                     0 8px 24px -6px rgba(168, 85, 108, 0.1),
+                     inset 0 1px 1px rgba(255, 255, 255, 0.9);
     }
 
     * {
@@ -152,8 +152,8 @@
       width: 100%;
       max-width: 560px;
       background: var(--card-glass);
-      backdrop-filter: blur(22px) saturate(160%);
-      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      backdrop-filter: blur(7px) saturate(145%);
+      -webkit-backdrop-filter: blur(7px) saturate(145%);
       border: 1.5px solid var(--card-border);
       border-radius: 32px;
       box-shadow: var(--shadow-soft);
@@ -265,6 +265,7 @@
       font-weight: 400;
       margin-bottom: -0.25rem;
       line-height: 1.2;
+      text-shadow: 0 1px 8px rgba(255, 252, 253, 0.95);
     }
 
     .main-title {
@@ -275,16 +276,19 @@
       color: var(--text-dark);
       letter-spacing: -0.01em;
       margin-bottom: 0.75rem;
+      text-shadow: 0 1px 10px rgba(255, 252, 253, 0.98), 0 0 3px rgba(255, 255, 255, 0.9);
     }
 
     .intro-subtitle {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       font-size: clamp(1.12rem, 3.4vw, 1.32rem);
+      font-weight: 600;
       line-height: 1.55;
       color: var(--text-muted);
       max-width: 400px;
       margin: 0 auto 1.85rem;
+      text-shadow: 0 1px 8px rgba(255, 252, 253, 0.96), 0 0 2px rgba(255, 255, 255, 0.9);
       transition: opacity 0.4s ease, margin 0.4s ease;
     }
 
@@ -486,12 +490,12 @@
     }
 
     .letter-paper {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 246, 249, 0.58) 100%);
-      border: 1px solid rgba(212, 139, 156, 0.32);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 246, 249, 0.36) 100%);
+      border: 1px solid rgba(212, 139, 156, 0.36);
       border-radius: 22px;
       padding: clamp(1.35rem, 4.5vw, 2.2rem);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                  0 8px 24px -8px rgba(168, 85, 108, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78),
+                  0 8px 24px -8px rgba(168, 85, 108, 0.08);
       position: relative;
     }
 
@@ -501,15 +505,17 @@
       color: var(--rose-crimson);
       margin-bottom: 0.85rem;
       line-height: 1.2;
+      text-shadow: 0 1px 8px rgba(255, 252, 253, 0.96);
     }
 
     .letter-body p {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.12rem, 3.2vw, 1.26rem);
+      font-size: clamp(1.14rem, 3.3vw, 1.26rem);
       line-height: 1.72;
       color: var(--text-body);
       margin-bottom: 1.05rem;
-      font-weight: 500;
+      font-weight: 600;
+      text-shadow: 0 1px 9px rgba(255, 253, 254, 0.98), 0 0 3px rgba(255, 255, 255, 0.92);
     }
 
     .letter-body p:last-child {
@@ -520,18 +526,21 @@
       margin: 1.25rem 0;
       padding: 0.95rem 1.2rem;
       border-left: 3px solid var(--rose-gold);
-      background: rgba(253, 232, 238, 0.55);
+      background: rgba(255, 240, 245, 0.48);
       border-radius: 0 14px 14px 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
+      font-weight: 600;
       font-size: clamp(1.1rem, 3.1vw, 1.22rem);
       color: var(--rose-crimson);
       line-height: 1.55;
+      text-shadow: 0 1px 8px rgba(255, 253, 254, 0.96);
     }
 
     .letter-signoff {
       margin-top: 1.4rem;
       text-align: right;
+      text-shadow: 0 1px 8px rgba(255, 253, 254, 0.96);
     }
 
     .signoff-label {
@@ -663,6 +672,9 @@
     /* Mobile Adjustments */
     @media (max-width: 480px) {
       .greeting-card {
+        background: rgba(255, 251, 252, 0.38);
+        backdrop-filter: blur(4.5px) saturate(145%);
+        -webkit-backdrop-filter: blur(4.5px) saturate(145%);
         border-radius: 26px;
         padding: 1.85rem 1.25rem 2rem;
       }
@@ -673,6 +685,7 @@
       }
 
       .letter-paper {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 246, 249, 0.30) 100%);
         padding: 1.2rem 1.05rem;
       }
 
@@ -886,7 +899,7 @@
                 </div>
 
                 <p>
-                  Starting now, I will give you flowers more often because getting them gives you the exact same excitement I feel whenever my new PC parts are arriving. I also finally figured out the price of flowers, haha, for just 350 pesos, you can already get a bouquet with three roses. I hope you are the one I spend my final moments with, and I will love you until my last breath.
+                  Starting now, I will give you flowers more often because getting them gives you the exact same excitement I feel whenever my new PC parts are arriving. I also finally figured out the price of flowers, haha—for just 350 pesos, you can already get a bouquet with three roses. I hope you are the one I spend my final moments with, and I will love you until my last breath.
                 </p>
               </div>
 
@@ -962,16 +975,16 @@
 
       // Continuous background falling petals
       const ambientPetals = [];
-      const AMBIENT_COUNT = width < 600 ? 36 : 58;
+      const AMBIENT_COUNT = width < 600 ? 50 : 66;
 
       function createAmbientPetal(startAtTop = false) {
         const palette = pickRandom(PALETTES);
         // Types: 0 = sakura notched petal, 1 = plump rose petal, 2 = full 5-petal blossom
-        const shapeType = Math.random() < 0.22 ? 2 : (Math.random() < 0.55 ? 0 : 1);
+        const shapeType = Math.random() < 0.32 ? 2 : (Math.random() < 0.55 ? 0 : 1);
         return {
           x: randomRange(0, width),
           y: startAtTop ? randomRange(-120, -15) : randomRange(-100, height),
-          size: shapeType === 2 ? randomRange(9, 15) : randomRange(8, 16),
+          size: shapeType === 2 ? randomRange(10, 17) : randomRange(9, 17),
           speedY: randomRange(0.65, 1.65),
           speedX: randomRange(-0.45, 0.55),
           swayAmp: randomRange(0.6, 1.8),
@@ -981,7 +994,7 @@
           rotationSpeed: randomRange(-0.02, 0.02),
           flip: randomRange(0, Math.PI * 2),
           flipSpeed: randomRange(0.015, 0.04),
-          opacity: randomRange(0.55, 0.92),
+          opacity: randomRange(0.7, 0.96),
           palette,
           shapeType
         };
